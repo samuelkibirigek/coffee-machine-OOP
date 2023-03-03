@@ -1,4 +1,4 @@
-from menu import Menu, MenuItem
+from menu import Menu
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
@@ -8,7 +8,7 @@ coffee = CoffeeMaker()
 money = MoneyMachine()
 
 while machine_is_on:
-    choice = input(f"What would you like? ({menu.get_items()}):\n")
+    choice = input(f"What would you like? ({menu.get_items()}):\n").lower()
 
     for item in menu.menu:
         if choice == item.name:
